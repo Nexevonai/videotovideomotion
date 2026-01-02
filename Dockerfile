@@ -85,9 +85,13 @@ RUN git clone https://github.com/chflame163/ComfyUI_LayerStyle.git \
 RUN git clone https://github.com/rgthree/rgthree-comfy.git \
     $COMFYUI_PATH/custom_nodes/rgthree-comfy
 
-# Custom Scripts (for Int primitive node)
+# Custom Scripts (for utility nodes)
 RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git \
     $COMFYUI_PATH/custom_nodes/ComfyUI-Custom-Scripts
+
+# WAS Node Suite (for Int node)
+RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui.git \
+    $COMFYUI_PATH/custom_nodes/was-node-suite-comfyui
 
 # --- 7. Install Custom Node Requirements ---
 # WanVideoWrapper requirements
