@@ -73,6 +73,18 @@ RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git \
 RUN git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git \
     $COMFYUI_PATH/custom_nodes/ComfyUI_Comfyroll_CustomNodes
 
+# Essentials nodes (for SimpleMath+)
+RUN git clone https://github.com/cubiq/ComfyUI_essentials.git \
+    $COMFYUI_PATH/custom_nodes/ComfyUI_essentials
+
+# LayerStyle nodes (for ImageScaleByAspectRatio)
+RUN git clone https://github.com/chflame163/ComfyUI_LayerStyle.git \
+    $COMFYUI_PATH/custom_nodes/ComfyUI_LayerStyle
+
+# rgthree nodes (for Fast Groups Bypasser)
+RUN git clone https://github.com/rgthree/rgthree-comfy.git \
+    $COMFYUI_PATH/custom_nodes/rgthree-comfy
+
 # --- 7. Install Custom Node Requirements ---
 # WanVideoWrapper requirements
 RUN /venv/bin/python -m pip install \
