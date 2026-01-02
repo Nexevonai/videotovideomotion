@@ -69,6 +69,10 @@ RUN git clone https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite.git \
 RUN git clone https://github.com/Fannovel16/comfyui_controlnet_aux.git \
     $COMFYUI_PATH/custom_nodes/comfyui_controlnet_aux
 
+# ComfyRoll nodes (for CR Prompt Text)
+RUN git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git \
+    $COMFYUI_PATH/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+
 # --- 7. Install Custom Node Requirements ---
 # WanVideoWrapper requirements
 RUN /venv/bin/python -m pip install \
@@ -107,6 +111,11 @@ RUN /venv/bin/python -m pip install \
     trimesh[easy] \
     albumentations \
     scikit-learn
+
+# WanAnimatePreprocess requirements (ONNX for pose detection)
+RUN /venv/bin/python -m pip install \
+    onnxruntime-gpu \
+    onnx
 
 # --- 8. Network Volume Model Setup ---
 # Models are pre-downloaded to /runpod-volume/models on the Network Volume
