@@ -159,19 +159,14 @@ RUN /venv/bin/huggingface-cli download JunkyByte/easy_ViTPose \
 RUN mv $COMFYUI_PATH/models/detection/onnx/wholebody/* $COMFYUI_PATH/models/detection/ 2>/dev/null || true
 RUN rm -rf $COMFYUI_PATH/models/detection/onnx 2>/dev/null || true
 
-# YOLO model for detection (yolov10m as referenced in workflow)
-RUN /venv/bin/huggingface-cli download Bingsu/yolov10-onnx \
-    yolov10m.onnx \
-    --local-dir $COMFYUI_PATH/models/detection \
-    --local-dir-use-symlinks False
-
-# Wan2.2-Animate detection model (backup)
+# YOLO + detection models from Wan-AI (public repo)
 RUN /venv/bin/huggingface-cli download Wan-AI/Wan2.2-Animate-14B \
+    process_checkpoint/det/yolov10m.onnx \
     process_checkpoint/det/yolox_l_8xb8-300e_coco_20211126_140236-d3bd2b23.pth \
     --local-dir $COMFYUI_PATH/models/detection \
     --local-dir-use-symlinks False
 
-# Move det file to correct location
+# Move det files to correct location
 RUN mv $COMFYUI_PATH/models/detection/process_checkpoint/det/* $COMFYUI_PATH/models/detection/ 2>/dev/null || true
 RUN rm -rf $COMFYUI_PATH/models/detection/process_checkpoint 2>/dev/null || true
 
