@@ -108,80 +108,27 @@ RUN /venv/bin/python -m pip install \
     albumentations \
     scikit-learn
 
-# --- 8. Download SCAIL Model (BF16 - Full Quality) ---
-# Main diffusion model (~28GB)
-RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    SCAIL/Wan21-14B-SCAIL-preview_comfy_bf16.safetensors \
-    --local-dir $COMFYUI_PATH/models/diffusion_models \
-    --local-dir-use-symlinks False
+# --- 8. Network Volume Model Setup ---
+# Models are pre-downloaded to /runpod-volume/models on the Network Volume
+# At runtime, start.sh creates symlinks from ComfyUI model folders to the volume
+# This avoids 60GB+ downloads during build and enables fast deployments
+#
+# Expected Network Volume structure:
+#   /runpod-volume/models/
+#     ├── diffusion_models/  (SCAIL 14B BF16 - 31GB)
+#     ├── text_encoders/     (umt5-xxl - 11GB)
+#     ├── vae/               (Wan2.1 VAE - 245MB)
+#     ├── clip_vision/       (clip_vision_h - 1.2GB)
+#     ├── loras/             (Lightx2v - 1.4GB)
+#     ├── detection/         (ViTPose, YOLO - 1.5GB)
+#     └── controlnet/        (Uni3C - 1.9GB)
 
-# --- 9. Download Text Encoder ---
-RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    umt5-xxl-enc-bf16.safetensors \
-    --local-dir $COMFYUI_PATH/models/text_encoders \
-    --local-dir-use-symlinks False
-
-# --- 10. Download VAE ---
-RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    Wan2_1_VAE_bf16.safetensors \
-    --local-dir $COMFYUI_PATH/models/vae \
-    --local-dir-use-symlinks False
-
-# --- 11. Download CLIP Vision ---
-RUN /venv/bin/huggingface-cli download Comfy-Org/Wan_2.1_ComfyUI_repackaged \
-    split_files/clip_vision/clip_vision_h.safetensors \
-    --local-dir $COMFYUI_PATH/models/clip_vision \
-    --local-dir-use-symlinks False
-
-# Move clip vision file to correct location
-RUN mv $COMFYUI_PATH/models/clip_vision/split_files/clip_vision/* $COMFYUI_PATH/models/clip_vision/ 2>/dev/null || true
-RUN rm -rf $COMFYUI_PATH/models/clip_vision/split_files 2>/dev/null || true
-
-# --- 12. Download LoRAs (Lightx2v) ---
-# Download the specific lora referenced in the workflow
-RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors \
-    --local-dir $COMFYUI_PATH/models/loras \
-    --local-dir-use-symlinks False
-
-# Move lora file to correct location
-RUN mv $COMFYUI_PATH/models/loras/Lightx2v/* $COMFYUI_PATH/models/loras/ 2>/dev/null || true
-RUN rm -rf $COMFYUI_PATH/models/loras/Lightx2v 2>/dev/null || true
-
-# --- 13. Download ONNX Detection Models ---
-# ViTPose wholebody (vitpose-l as referenced in workflow)
-RUN /venv/bin/huggingface-cli download JunkyByte/easy_ViTPose \
-    onnx/wholebody/vitpose-l-wholebody.onnx \
-    --local-dir $COMFYUI_PATH/models/detection \
-    --local-dir-use-symlinks False
-
-# Move vitpose file to correct location
-RUN mv $COMFYUI_PATH/models/detection/onnx/wholebody/* $COMFYUI_PATH/models/detection/ 2>/dev/null || true
-RUN rm -rf $COMFYUI_PATH/models/detection/onnx 2>/dev/null || true
-
-# YOLO + detection models from Wan-AI (public repo)
-RUN /venv/bin/huggingface-cli download Wan-AI/Wan2.2-Animate-14B \
-    process_checkpoint/det/yolov10m.onnx \
-    process_checkpoint/det/yolox_l_8xb8-300e_coco_20211126_140236-d3bd2b23.pth \
-    --local-dir $COMFYUI_PATH/models/detection \
-    --local-dir-use-symlinks False
-
-# Move det files to correct location
-RUN mv $COMFYUI_PATH/models/detection/process_checkpoint/det/* $COMFYUI_PATH/models/detection/ 2>/dev/null || true
-RUN rm -rf $COMFYUI_PATH/models/detection/process_checkpoint 2>/dev/null || true
-
-# --- 14. Download Uni3C ControlNet ---
-RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    Wan21_Uni3C_controlnet_fp16.safetensors \
-    --local-dir $COMFYUI_PATH/models/controlnet \
-    --local-dir-use-symlinks False
-
-# --- 15. Copy Handler Scripts ---
+# --- 9. Copy Handler Scripts ---
 COPY src/start.sh /root/start.sh
 COPY src/rp_handler.py /root/rp_handler.py
 COPY src/ComfyUI_API_Wrapper.py /root/ComfyUI_API_Wrapper.py
 
 RUN chmod +x /root/start.sh
 
-# --- 16. Start Container ---
+# --- 10. Start Container ---
 CMD ["/root/start.sh"]

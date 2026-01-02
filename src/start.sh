@@ -5,6 +5,32 @@ set -e
 TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
 export LD_PRELOAD="${TCMALLOC}"
 
+echo "SCAIL Worker: Initializing..."
+
+# --- Link Models from Network Volume ---
+if [ -d "/runpod-volume/models" ]; then
+    echo "Linking models from network volume..."
+
+    # Create symlinks for each model directory
+    for dir in diffusion_models text_encoders vae clip_vision loras detection controlnet; do
+        if [ -d "/runpod-volume/models/$dir" ]; then
+            # Link all files from network volume to ComfyUI models folder
+            for file in /runpod-volume/models/$dir/*; do
+                if [ -f "$file" ]; then
+                    filename=$(basename "$file")
+                    ln -sf "$file" "/root/comfy/ComfyUI/models/$dir/$filename"
+                    echo "  Linked: $dir/$filename"
+                fi
+            done
+        fi
+    done
+
+    echo "Model linking complete!"
+else
+    echo "WARNING: Network volume not found at /runpod-volume/models"
+    echo "Models must be pre-loaded on the network volume for this worker to function."
+fi
+
 echo "SCAIL Worker: Starting ComfyUI in the background..."
 
 # Start ComfyUI server in the background
