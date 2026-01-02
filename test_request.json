@@ -663,10 +663,6 @@
           "value": 16
         }
       },
-      "139": {
-        "class_type": "Fast Groups Bypasser (rgthree)",
-        "inputs": {}
-      },
       "35": {
         "class_type": "VHS_VideoCombine",
         "inputs": {
