@@ -117,7 +117,7 @@ RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
 
 # --- 9. Download Text Encoder ---
 RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    umt5xxl_fp16.safetensors \
+    umt5-xxl-enc-bf16.safetensors \
     --local-dir $COMFYUI_PATH/models/text_encoders \
     --local-dir-use-symlinks False
 
@@ -138,8 +138,9 @@ RUN mv $COMFYUI_PATH/models/clip_vision/split_files/clip_vision/* $COMFYUI_PATH/
 RUN rm -rf $COMFYUI_PATH/models/clip_vision/split_files 2>/dev/null || true
 
 # --- 12. Download LoRAs (Lightx2v) ---
+# Download the specific lora referenced in the workflow
 RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
-    Lightx2v/lightx2v_wan2.1_lora_bf16.safetensors \
+    Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors \
     --local-dir $COMFYUI_PATH/models/loras \
     --local-dir-use-symlinks False
 
@@ -148,17 +149,31 @@ RUN mv $COMFYUI_PATH/models/loras/Lightx2v/* $COMFYUI_PATH/models/loras/ 2>/dev/
 RUN rm -rf $COMFYUI_PATH/models/loras/Lightx2v 2>/dev/null || true
 
 # --- 13. Download ONNX Detection Models ---
-# ViTPose wholebody
+# ViTPose wholebody (vitpose-l as referenced in workflow)
 RUN /venv/bin/huggingface-cli download JunkyByte/easy_ViTPose \
-    onnx/wholebody/vitpose-h-wholebody.onnx \
+    onnx/wholebody/vitpose-l-wholebody.onnx \
     --local-dir $COMFYUI_PATH/models/detection \
     --local-dir-use-symlinks False
 
-# Wan2.2-Animate detection model
+# Move vitpose file to correct location
+RUN mv $COMFYUI_PATH/models/detection/onnx/wholebody/* $COMFYUI_PATH/models/detection/ 2>/dev/null || true
+RUN rm -rf $COMFYUI_PATH/models/detection/onnx 2>/dev/null || true
+
+# YOLO model for detection (yolov10m as referenced in workflow)
+RUN /venv/bin/huggingface-cli download Bingsu/yolov10-onnx \
+    yolov10m.onnx \
+    --local-dir $COMFYUI_PATH/models/detection \
+    --local-dir-use-symlinks False
+
+# Wan2.2-Animate detection model (backup)
 RUN /venv/bin/huggingface-cli download Wan-AI/Wan2.2-Animate-14B \
     process_checkpoint/det/yolox_l_8xb8-300e_coco_20211126_140236-d3bd2b23.pth \
     --local-dir $COMFYUI_PATH/models/detection \
     --local-dir-use-symlinks False
+
+# Move det file to correct location
+RUN mv $COMFYUI_PATH/models/detection/process_checkpoint/det/* $COMFYUI_PATH/models/detection/ 2>/dev/null || true
+RUN rm -rf $COMFYUI_PATH/models/detection/process_checkpoint 2>/dev/null || true
 
 # --- 14. Download Uni3C ControlNet ---
 RUN /venv/bin/huggingface-cli download Kijai/WanVideo_comfy \
