@@ -1,0 +1,50 @@
+{
+  "input": {
+    "video_url": "https://example.com/driving-video.mp4",
+    "image_url": "https://example.com/character-reference.png",
+    "workflow": {
+      "_comment": "This is a simplified example. Use the full API-format workflow exported from ComfyUI.",
+      "1": {
+        "inputs": {
+          "video": "placeholder.mp4",
+          "force_rate": 0,
+          "force_size": "Disabled",
+          "custom_width": 512,
+          "custom_height": 512,
+          "frame_load_cap": 0,
+          "skip_first_frames": 0,
+          "select_every_nth": 1
+        },
+        "class_type": "VHS_LoadVideo",
+        "_meta": {
+          "title": "Load Video (Upload)"
+        }
+      },
+      "2": {
+        "inputs": {
+          "image": "placeholder.png",
+          "upload": "image"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+          "title": "Load Image"
+        }
+      },
+      "100": {
+        "inputs": {
+          "frame_rate": 24,
+          "loop_count": 0,
+          "filename_prefix": "SCAIL_output",
+          "format": "video/h264-mp4",
+          "pingpong": false,
+          "save_output": true,
+          "images": ["99", 0]
+        },
+        "class_type": "VHS_VideoCombine",
+        "_meta": {
+          "title": "Video Combine"
+        }
+      }
+    }
+  }
+}
