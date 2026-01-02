@@ -85,6 +85,10 @@ RUN git clone https://github.com/chflame163/ComfyUI_LayerStyle.git \
 RUN git clone https://github.com/rgthree/rgthree-comfy.git \
     $COMFYUI_PATH/custom_nodes/rgthree-comfy
 
+# Custom Scripts (for Int primitive node)
+RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git \
+    $COMFYUI_PATH/custom_nodes/ComfyUI-Custom-Scripts
+
 # --- 7. Install Custom Node Requirements ---
 # WanVideoWrapper requirements
 RUN /venv/bin/python -m pip install \
@@ -128,6 +132,10 @@ RUN /venv/bin/python -m pip install \
 RUN /venv/bin/python -m pip install \
     onnxruntime-gpu \
     onnx
+
+# LayerStyle requirements
+RUN /venv/bin/python -m pip install \
+    blend-modes
 
 # --- 8. Network Volume Model Setup ---
 # Models are pre-downloaded to /runpod-volume/models on the Network Volume
