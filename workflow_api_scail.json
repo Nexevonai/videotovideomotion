@@ -483,7 +483,7 @@
   "37": {
     "class_type": "WanVideoModelLoader",
     "inputs": {
-      "model": "SCAIL/Wan21-14B-SCAIL-preview_comfy_bf16.safetensors",
+      "model": "Wan21-14B-SCAIL-preview_comfy_bf16.safetensors",
       "base_precision": "fp16_fast",
       "quantization": "disabled",
       "load_device": "offload_device",
