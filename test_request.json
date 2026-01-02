@@ -133,16 +133,6 @@
           "latent_strength": 1
         }
       },
-      "141": {
-        "class_type": "SetNode",
-        "inputs": {
-          "IMAGE": [
-            "34",
-            0
-          ],
-          "name": "output"
-        }
-      },
       "34": {
         "class_type": "WanVideoDecode",
         "inputs": {
@@ -250,8 +240,8 @@
             2
           ],
           "frame_rate": [
-            "137",
-            0
+            "134",
+            1
           ],
           "save_output": false,
           "filename_prefix": "WanVideo_SCAIL",
@@ -273,8 +263,8 @@
             0
           ],
           "frame_rate": [
-            "138",
-            0
+            "134",
+            1
           ],
           "save_output": false,
           "filename_prefix": "SCAIL_POSE",
@@ -452,15 +442,9 @@
         "class_type": "GetImageSizeAndCount",
         "inputs": {
           "image": [
-            "142",
+            "34",
             0
           ]
-        }
-      },
-      "142": {
-        "class_type": "GetNode",
-        "inputs": {
-          "name": "output"
         }
       },
       "47": {
@@ -500,16 +484,6 @@
         "inputs": {
           "value": -420700676683792,
           "widget_1": "randomize"
-        }
-      },
-      "136": {
-        "class_type": "SetNode",
-        "inputs": {
-          "FLOAT": [
-            "134",
-            1
-          ],
-          "name": "fps"
         }
       },
       "39": {
@@ -553,8 +527,8 @@
             2
           ],
           "frame_rate": [
-            "137",
-            0
+            "134",
+            1
           ],
           "save_output": false,
           "filename_prefix": "WanVideo_SCAIL",
@@ -610,18 +584,6 @@
           "direction": "left",
           "match_image_size": true,
           "widget_3": null
-        }
-      },
-      "137": {
-        "class_type": "GetNode",
-        "inputs": {
-          "name": "fps"
-        }
-      },
-      "138": {
-        "class_type": "GetNode",
-        "inputs": {
-          "name": "fps"
         }
       },
       "62": {
@@ -717,8 +679,8 @@
             2
           ],
           "frame_rate": [
-            "137",
-            0
+            "134",
+            1
           ],
           "save_output": true,
           "filename_prefix": "WanVideo_SCAIL",

@@ -89,10 +89,6 @@ RUN git clone https://github.com/rgthree/rgthree-comfy.git \
 RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git \
     $COMFYUI_PATH/custom_nodes/ComfyUI-Custom-Scripts
 
-# WAS Node Suite
-RUN git clone https://github.com/WASasquatch/was-node-suite-comfyui.git \
-    $COMFYUI_PATH/custom_nodes/was-node-suite-comfyui
-
 # ComfyLiterals (for Int, Float, String nodes)
 RUN git clone https://github.com/M1kep/ComfyLiterals.git \
     $COMFYUI_PATH/custom_nodes/ComfyLiterals
@@ -144,6 +140,10 @@ RUN /venv/bin/python -m pip install \
 # LayerStyle requirements
 RUN /venv/bin/python -m pip install \
     blend-modes
+
+# SageAttention (for faster video generation with sageattn mode)
+RUN /venv/bin/python -m pip install \
+    sageattention
 
 # --- 8. Network Volume Model Setup ---
 # Models are pre-downloaded to /runpod-volume/models on the Network Volume
