@@ -1,0 +1,173 @@
+2026-01-03T00:59:42.571221919Z ==========
+2026-01-03T00:59:42.571256409Z == CUDA ==
+2026-01-03T00:59:42.571268859Z ==========
+2026-01-03T00:59:42.576191829Z CUDA Version 12.4.1
+2026-01-03T00:59:42.587279740Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-01-03T00:59:42.587287311Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-01-03T00:59:42.587291131Z By pulling and using the container, you accept the terms and conditions of this license:
+2026-01-03T00:59:42.587293971Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-01-03T00:59:42.587300451Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-01-03T00:59:42.596089158Z SCAIL Worker: Initializing...
+2026-01-03T00:59:42.596792049Z Linking models from network volume...
+2026-01-03T00:59:42.602860511Z   Linked: diffusion_models/Wan21-14B-SCAIL-preview_comfy_bf16.safetensors
+2026-01-03T00:59:42.610704337Z   Linked: text_encoders/umt5-xxl-enc-bf16.safetensors
+2026-01-03T00:59:42.615715716Z   Linked: vae/Wan2_1_VAE_bf16.safetensors
+2026-01-03T00:59:42.619994275Z   Linked: clip_vision/clip_vision_h.safetensors
+2026-01-03T00:59:42.624255133Z   Linked: loras/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+2026-01-03T00:59:42.628530162Z   Linked: detection/vitpose-l-wholebody.onnx
+2026-01-03T00:59:42.631691728Z   Linked: detection/yolov10m.onnx
+2026-01-03T00:59:42.634967734Z   Linked: detection/yolox_l_8x8_300e_coco_20211126_140236-d3bd2b23.pth
+2026-01-03T00:59:42.639235443Z   Linked: controlnet/Wan21_Uni3C_controlnet_fp16.safetensors
+2026-01-03T00:59:42.639242853Z Model linking complete!
+2026-01-03T00:59:42.639251923Z SCAIL Worker: Starting ComfyUI in the background...
+2026-01-03T00:59:42.639523153Z Waiting for ComfyUI to be ready...
+2026-01-03T00:59:43.717345421Z .[START] Security scan
+2026-01-03T00:59:43.717373412Z [DONE] Security scan
+2026-01-03T00:59:43.717377152Z ## ComfyUI-Manager: installing dependencies done.
+2026-01-03T00:59:43.717398552Z ** ComfyUI startup time: 2026-01-03 00:59:43.717
+2026-01-03T00:59:43.717466102Z ** Platform: Linux
+2026-01-03T00:59:43.717539712Z ** Python version: 3.11.10 (main, Sep  7 2024, 18:35:41) [GCC 11.4.0]
+2026-01-03T00:59:43.717569862Z ** Python executable: /venv/bin/python
+2026-01-03T00:59:43.717626722Z ** ComfyUI Path: /root/comfy/ComfyUI
+2026-01-03T00:59:43.717673492Z ** ComfyUI Base Folder Path: /root/comfy/ComfyUI
+2026-01-03T00:59:43.717725282Z ** User directory: /root/comfy/ComfyUI/user
+2026-01-03T00:59:43.717795582Z ** ComfyUI-Manager config path: /root/comfy/ComfyUI/user/__manager/config.ini
+2026-01-03T00:59:43.717855113Z ** Log path: /root/comfy/ComfyUI/user/comfyui.log
+2026-01-03T00:59:44.511278762Z Prestartup times for custom nodes:
+2026-01-03T00:59:44.511309632Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/rgthree-comfy
+2026-01-03T00:59:44.511334052Z    1.8 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+2026-01-03T00:59:45.873280749Z Checkpoint files will always be loaded safely.
+2026-01-03T00:59:46.480812853Z Total VRAM 81038 MB, total RAM 2051931 MB
+2026-01-03T00:59:46.481071144Z pytorch version: 2.9.1+cu128
+2026-01-03T00:59:46.481928015Z Set vram state to: NORMAL_VRAM
+2026-01-03T00:59:46.482320986Z Device: cuda:0 NVIDIA A100-SXM4-80GB : cudaMallocAsync
+2026-01-03T00:59:46.482487866Z Using async weight offloading with 2 streams
+2026-01-03T00:59:46.482692047Z Enabled pinned memory 1949334.0
+2026-01-03T00:59:46.498563498Z working around nvidia conv3d memory bug.
+2026-01-03T00:59:47.793772733Z Using pytorch attention
+2026-01-03T00:59:49.873438181Z Python version: 3.11.10 (main, Sep  7 2024, 18:35:41) [GCC 11.4.0]
+2026-01-03T00:59:49.873464791Z ComfyUI version: 0.7.0
+2026-01-03T00:59:49.876603477Z ComfyUI frontend version: 1.35.9
+2026-01-03T00:59:49.877217758Z [Prompt Server] web root: /venv/lib/python3.11/site-packages/comfyui_frontend_package/static
+2026-01-03T00:59:50.508394109Z Total VRAM 81038 MB, total RAM 2051931 MB
+2026-01-03T00:59:50.508437689Z pytorch version: 2.9.1+cu128
+2026-01-03T00:59:50.508669719Z Set vram state to: NORMAL_VRAM
+2026-01-03T00:59:50.508716460Z Device: cuda:0 NVIDIA A100-SXM4-80GB : cudaMallocAsync
+2026-01-03T00:59:50.508805950Z Using async weight offloading with 2 streams
+2026-01-03T00:59:50.509028390Z Enabled pinned memory 1949334.0
+2026-01-03T00:59:51.206150540Z ### Loading: ComfyUI-Manager (V3.39)
+2026-01-03T00:59:51.206495061Z [ComfyUI-Manager] network_mode: public
+2026-01-03T00:59:51.206564581Z [ComfyUI-Manager] ComfyUI per-queue preview override detected (PR #11261). Manager's preview method feature is disabled. Use ComfyUI's --preview-method CLI option or 'Settings > Execution > Live preview method'.
+2026-01-03T00:59:51.259888746Z ### ComfyUI Version: v0.7.0-7-g65cfcf5b | Released on '2026-01-01'
+2026-01-03T00:59:51.320811945Z ....
+2026-01-03T00:59:51.320854946Z [92m[rgthree-comfy] Loaded 48 epic nodes. 🎉[0m
+2026-01-03T00:59:51.320872186Z [33m[rgthree-comfy] ComfyUI's new Node 2.0 rendering may be incompatible with some rgthree-comfy nodes and features, breaking some rendering as well as losing the ability to access a node's properties (a vital part of many nodes). It also appears to run MUCH more slowly spiking CPU usage and causing jankiness and unresponsiveness, especially with large workflows. Personally I am not planning to use the new Nodes 2.0 and, unfortunately, am not able to invest the time to investigate and overhaul rgthree-comfy where needed. If you have issues when Nodes 2.0 is enabled, I'd urge you to switch it off as well and join me in hoping ComfyUI is not planning to deprecate the existing, stable canvas rendering all together.
+2026-01-03T00:59:51.320880756Z [0m
+2026-01-03T00:59:51.325428975Z Failed to find comfy root automatically, please copy the folder /root/comfy/ComfyUI/custom_nodes/ComfyLiterals/web manually in the web/extensions folder of ComfyUI
+2026-01-03T00:59:51.426259213Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+2026-01-03T00:59:51.435926152Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+2026-01-03T00:59:51.487858064Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+2026-01-03T00:59:51.581911419Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+2026-01-03T00:59:51.858098012Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+2026-01-03T00:59:51.923048379Z # 😺dzNodes: LayerStyle -> [1;33mCannot import name 'guidedFilter' from 'cv2.ximgproc'
+2026-01-03T00:59:51.923062309Z A few nodes cannot works properly, while most nodes are not affected. Please REINSTALL package 'opencv-contrib-python'.
+2026-01-03T00:59:51.923065499Z For detail refer to [4mhttps://github.com/chflame163/ComfyUI_LayerStyle/issues/5[0m[m
+2026-01-03T00:59:52.417431321Z generated new fontManager
+2026-01-03T00:59:52.645079208Z ------------------------------------------
+2026-01-03T00:59:52.645132779Z [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
+2026-01-03T00:59:52.645138859Z ------------------------------------------
+2026-01-03T00:59:52.645142979Z ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+2026-01-03T00:59:52.645151659Z ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+2026-01-03T00:59:52.645157508Z ------------------------------------------
+2026-01-03T00:59:52.653133914Z [36;20m[/root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+2026-01-03T00:59:52.653350545Z [36;20m[/root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+2026-01-03T00:59:52.653517675Z [36;20m[/root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'MIGraphXExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+2026-01-03T00:59:52.697980612Z DWPose: Onnxruntime with acceleration providers detected
+2026-01-03T00:59:53.647031628Z Import times for custom nodes:
+2026-01-03T00:59:53.647095718Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/websocket_image_save.py
+2026-01-03T00:59:53.647122738Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyLiterals
+2026-01-03T00:59:53.647169938Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-SCAIL-Pose
+2026-01-03T00:59:53.647190658Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+2026-01-03T00:59:53.647250188Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-WanAnimatePreprocess
+2026-01-03T00:59:53.647270738Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI_essentials
+2026-01-03T00:59:53.647311138Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/rgthree-comfy
+2026-01-03T00:59:53.647344768Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux
+2026-01-03T00:59:53.647370598Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+2026-01-03T00:59:53.647413078Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+2026-01-03T00:59:53.647447409Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-KJNodes
+2026-01-03T00:59:53.647476138Z    0.5 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+2026-01-03T00:59:53.647510578Z    0.7 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+2026-01-03T00:59:53.647541999Z    0.8 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI_LayerStyle
+2026-01-03T00:59:54.151889810Z Context impl SQLiteImpl.
+2026-01-03T00:59:54.151975030Z Will assume non-transactional DDL.
+2026-01-03T00:59:54.152781551Z No target revision found.
+2026-01-03T00:59:54.192621520Z Starting server
+2026-01-03T00:59:54.192861200Z To see the GUI go to: http://0.0.0.0:8188
+2026-01-03T00:59:54.711550710Z .
+2026-01-03T00:59:54.711596530Z ComfyUI is ready and listening on port 8188
+2026-01-03T00:59:54.711600550Z SCAIL Worker: Starting RunPod Handler...
+2026-01-03T00:59:55.250426109Z FETCH ComfyRegistry Data: 5/117
+2026-01-03T00:59:56.415840259Z SCAIL Video Motion Transfer Worker starting...
+2026-01-03T00:59:56.415857570Z --- Starting Serverless Worker |  Version 1.8.1 ---
+2026-01-03T00:59:56.779375274Z {"requestId": null, "message": "Jobs in queue: 1", "level": "INFO"}
+2026-01-03T00:59:56.779389274Z {"requestId": null, "message": "Jobs in progress: 1", "level": "INFO"}
+2026-01-03T00:59:56.779616465Z {"requestId": "ced2d7d2-f938-4156-9c70-afcb01d1f6a1-e2", "message": "Started.", "level": "INFO"}
+2026-01-03T00:59:57.199296459Z Injected video 'video_8a15429f-00ea-4a77-912e-f78bd4aae8e8.MOV' into VHS_LoadVideo node 65
+2026-01-03T00:59:57.709518832Z Injected image 'image_cf092f3f-35da-4509-bf83-e94edb7dceaf.png' into LoadImage node 52
+2026-01-03T00:59:57.709557092Z Executing workflow with output node: 131 (type: video)
+2026-01-03T00:59:57.712152887Z got prompt
+2026-01-03T00:59:57.721440456Z Failed to validate prompt for output 131:
+2026-01-03T00:59:57.721462105Z * Int 135:
+2026-01-03T00:59:57.721468165Z   - Required input is missing: Number
+2026-01-03T00:59:57.721481805Z * Int 151:
+2026-01-03T00:59:57.721531756Z   - Required input is missing: Number
+2026-01-03T00:59:57.721565876Z * Int 144:
+2026-01-03T00:59:57.721610416Z   - Required input is missing: Number
+2026-01-03T00:59:57.721632526Z * ImageResizeKJv2 36:
+2026-01-03T00:59:57.721679306Z   - Failed to convert an input value to a INT value: divisible_by, 255,255,255, invalid literal for int() with base 10: '255,255,255'
+2026-01-03T00:59:57.721698316Z   - Value not in list: upscale_method: '480' not in ['nearest-exact', 'bilinear', 'area', 'bicubic', 'lanczos']
+2026-01-03T00:59:57.721733896Z   - Value not in list: crop_position: 'crop' not in ['center', 'top', 'bottom', 'left', 'right']
+2026-01-03T00:59:57.721773016Z   - Value not in list: keep_proportion: '832' not in ['stretch', 'resize', 'pad', 'pad_edge', 'pad_edge_pixel', 'crop', 'pillarbox_blur', 'total_pixels']
+2026-01-03T00:59:57.721789096Z   - Value not in list: device: 'center' not in ['cpu', 'gpu']
+2026-01-03T00:59:57.721826676Z * WanVideoTextEncode 55:
+2026-01-03T00:59:57.721856016Z   - Value not in list: device: 'True' not in ['gpu', 'cpu']
+2026-01-03T00:59:57.721887426Z Output will be ignored
+2026-01-03T00:59:57.722030737Z Failed to validate prompt for output 56:
+2026-01-03T00:59:57.722043567Z Output will be ignored
+2026-01-03T00:59:57.722068857Z Failed to validate prompt for output 35:
+2026-01-03T00:59:57.722102247Z Output will be ignored
+2026-01-03T00:59:57.722157037Z Failed to validate prompt for output 143:
+2026-01-03T00:59:57.722194377Z Output will be ignored
+2026-01-03T00:59:57.722239087Z invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
+2026-01-03T00:59:57.725160113Z Error during processing: HTTP Error 400: Bad Request
+2026-01-03T00:59:57.725171743Z Traceback (most recent call last):
+2026-01-03T00:59:57.725175503Z   File "/root/rp_handler.py", line 165, in handler
+2026-01-03T00:59:57.725178243Z     output_data = api.queue_prompt_and_get_images(workflow, output_node_id)
+2026-01-03T00:59:57.725182133Z                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725185363Z   File "/root/ComfyUI_API_Wrapper.py", line 18, in queue_prompt_and_get_images
+2026-01-03T00:59:57.725188283Z     prompt_id = self.queue_prompt(prompt).get('prompt_id')
+2026-01-03T00:59:57.725191173Z                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725196823Z   File "/root/ComfyUI_API_Wrapper.py", line 52, in queue_prompt
+2026-01-03T00:59:57.725199553Z     return json.loads(urllib.request.urlopen(req).read())
+2026-01-03T00:59:57.725202223Z                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725204993Z   File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+2026-01-03T00:59:57.725207723Z     return opener.open(url, data, timeout)
+2026-01-03T00:59:57.725210653Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725213523Z   File "/usr/lib/python3.11/urllib/request.py", line 525, in open
+2026-01-03T00:59:57.725216213Z     response = meth(req, response)
+2026-01-03T00:59:57.725218913Z                ^^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725221623Z   File "/usr/lib/python3.11/urllib/request.py", line 634, in http_response
+2026-01-03T00:59:57.725224343Z     response = self.parent.error(
+2026-01-03T00:59:57.725227163Z                ^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725229863Z   File "/usr/lib/python3.11/urllib/request.py", line 563, in error
+2026-01-03T00:59:57.725232583Z     return self._call_chain(*args)
+2026-01-03T00:59:57.725235253Z            ^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T00:59:57.725237923Z   File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+2026-01-03T00:59:57.725240623Z     result = func(*args)
+2026-01-03T00:59:57.725243373Z              ^^^^^^^^^^^
+2026-01-03T00:59:57.725246113Z   File "/usr/lib/python3.11/urllib/request.py", line 643, in http_error_default
+2026-01-03T00:59:57.725248823Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+2026-01-03T00:59:57.725251583Z urllib.error.HTTPError: HTTP Error 400: Bad Request
+2026-01-03T00:59:57.872005161Z {"requestId": "ced2d7d2-f938-4156-9c70-afcb01d1f6a1-e2", "message": "Finished.", "level": "INFO"}
+2026-01-03T00:59:59.043406004Z FETCH ComfyRegistry Data: 10/117
+2026-01-03T01:00:02.877847360Z FETCH ComfyRegistry Data: 15/117

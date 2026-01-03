@@ -93,6 +93,10 @@ RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts.git \
 RUN git clone https://github.com/M1kep/ComfyLiterals.git \
     $COMFYUI_PATH/custom_nodes/ComfyLiterals
 
+# LogicUtils (required for specific Int node implementation)
+RUN git clone https://github.com/aria1th/ComfyUI-LogicUtils.git \
+    $COMFYUI_PATH/custom_nodes/ComfyUI-LogicUtils
+
 # --- 7. Install Custom Node Requirements ---
 # WanVideoWrapper requirements
 RUN /venv/bin/python -m pip install \
@@ -105,7 +109,9 @@ RUN /venv/bin/python -m pip install \
     protobuf \
     pyloudnorm \
     gguf>=0.17.1 \
-    opencv-python \
+    opencv-contrib-python \
+    sageattention \
+    numba \
     scipy
 
 # VideoHelperSuite requirements
