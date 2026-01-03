@@ -1,0 +1,301 @@
+2026-01-03T02:08:25.169179085Z ==========
+2026-01-03T02:08:25.169197335Z == CUDA ==
+2026-01-03T02:08:25.169236155Z ==========
+2026-01-03T02:08:25.177210239Z CUDA Version 12.4.1
+2026-01-03T02:08:25.179243478Z Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+2026-01-03T02:08:25.181117906Z This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+2026-01-03T02:08:25.181122156Z By pulling and using the container, you accept the terms and conditions of this license:
+2026-01-03T02:08:25.181129036Z https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+2026-01-03T02:08:25.181134076Z A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+2026-01-03T02:08:25.204986628Z SCAIL Worker: Initializing...
+2026-01-03T02:08:25.211381635Z Linking models from network volume...
+2026-01-03T02:08:25.218089804Z   Linked: diffusion_models/Wan21-14B-SCAIL-preview_comfy_bf16.safetensors
+2026-01-03T02:08:25.221975171Z   Linked: text_encoders/umt5-xxl-enc-bf16.safetensors
+2026-01-03T02:08:25.226067698Z   Linked: vae/Wan2_1_VAE_bf16.safetensors
+2026-01-03T02:08:25.230281696Z   Linked: clip_vision/clip_vision_h.safetensors
+2026-01-03T02:08:25.234340814Z   Linked: loras/lightx2v_I2V_14B_480p_cfg_step_distill_rank128_bf16.safetensors
+2026-01-03T02:08:25.238575952Z   Linked: detection/vitpose-l-wholebody.onnx
+2026-01-03T02:08:25.242112007Z   Linked: detection/yolov10m.onnx
+2026-01-03T02:08:25.246331535Z   Linked: detection/yolox_l_8x8_300e_coco_20211126_140236-d3bd2b23.pth
+2026-01-03T02:08:25.250149911Z   Linked: controlnet/Wan21_Uni3C_controlnet_fp16.safetensors
+2026-01-03T02:08:25.250158811Z Model linking complete!
+2026-01-03T02:08:25.250162581Z SCAIL Worker: Starting ComfyUI in the background...
+2026-01-03T02:08:25.250395132Z Waiting for ComfyUI to be ready...
+2026-01-03T02:08:26.204332257Z .[START] Security scan
+2026-01-03T02:08:26.204352287Z [DONE] Security scan
+2026-01-03T02:08:26.204358077Z ## ComfyUI-Manager: installing dependencies done.
+2026-01-03T02:08:26.204401528Z ** ComfyUI startup time: 2026-01-03 02:08:26.204
+2026-01-03T02:08:26.204458028Z ** Platform: Linux
+2026-01-03T02:08:26.204525858Z ** Python version: 3.11.10 (main, Sep  7 2024, 18:35:41) [GCC 11.4.0]
+2026-01-03T02:08:26.204574778Z ** Python executable: /venv/bin/python
+2026-01-03T02:08:26.204669099Z ** ComfyUI Path: /root/comfy/ComfyUI
+2026-01-03T02:08:26.204723899Z ** ComfyUI Base Folder Path: /root/comfy/ComfyUI
+2026-01-03T02:08:26.204778419Z ** User directory: /root/comfy/ComfyUI/user
+2026-01-03T02:08:26.204877240Z ** ComfyUI-Manager config path: /root/comfy/ComfyUI/user/__manager/config.ini
+2026-01-03T02:08:26.204924680Z ** Log path: /root/comfy/ComfyUI/user/comfyui.log
+2026-01-03T02:08:26.917958453Z Prestartup times for custom nodes:
+2026-01-03T02:08:26.917999073Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/rgthree-comfy
+2026-01-03T02:08:26.918017893Z    1.6 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+2026-01-03T02:08:28.226351556Z Checkpoint files will always be loaded safely.
+2026-01-03T02:08:28.581092685Z Total VRAM 81038 MB, total RAM 1031875 MB
+2026-01-03T02:08:28.581130865Z pytorch version: 2.9.1+cu128
+2026-01-03T02:08:28.581428276Z Set vram state to: NORMAL_VRAM
+2026-01-03T02:08:28.581786798Z Device: cuda:0 NVIDIA A100 80GB PCIe : cudaMallocAsync
+2026-01-03T02:08:28.581870408Z Using async weight offloading with 2 streams
+2026-01-03T02:08:28.582065879Z Enabled pinned memory 980281.0
+2026-01-03T02:08:28.592403203Z working around nvidia conv3d memory bug.
+2026-01-03T02:08:29.787928223Z Using pytorch attention
+2026-01-03T02:08:31.510718880Z Python version: 3.11.10 (main, Sep  7 2024, 18:35:41) [GCC 11.4.0]
+2026-01-03T02:08:31.510765840Z ComfyUI version: 0.7.0
+2026-01-03T02:08:31.513801623Z ComfyUI frontend version: 1.35.9
+2026-01-03T02:08:31.514362956Z [Prompt Server] web root: /venv/lib/python3.11/site-packages/comfyui_frontend_package/static
+2026-01-03T02:08:32.108069478Z Total VRAM 81038 MB, total RAM 1031875 MB
+2026-01-03T02:08:32.108122288Z pytorch version: 2.9.1+cu128
+2026-01-03T02:08:32.108302839Z Set vram state to: NORMAL_VRAM
+2026-01-03T02:08:32.108408199Z Device: cuda:0 NVIDIA A100 80GB PCIe : cudaMallocAsync
+2026-01-03T02:08:32.108467770Z Using async weight offloading with 2 streams
+2026-01-03T02:08:32.108629230Z Enabled pinned memory 980281.0
+2026-01-03T02:08:32.719577276Z ### Loading: ComfyUI-Manager (V3.39)
+2026-01-03T02:08:32.719975898Z [ComfyUI-Manager] network_mode: public
+2026-01-03T02:08:32.720111669Z [ComfyUI-Manager] ComfyUI per-queue preview override detected (PR #11261). Manager's preview method feature is disabled. Use ComfyUI's --preview-method CLI option or 'Settings > Execution > Live preview method'.
+2026-01-03T02:08:32.769473340Z ### ComfyUI Version: v0.7.0-7-g65cfcf5b | Released on '2026-01-01'
+2026-01-03T02:08:32.827093547Z ...
+2026-01-03T02:08:32.827129397Z [92m[rgthree-comfy] Loaded 48 magnificent nodes. 🎉[0m
+2026-01-03T02:08:32.827186207Z [33m[rgthree-comfy] ComfyUI's new Node 2.0 rendering may be incompatible with some rgthree-comfy nodes and features, breaking some rendering as well as losing the ability to access a node's properties (a vital part of many nodes). It also appears to run MUCH more slowly spiking CPU usage and causing jankiness and unresponsiveness, especially with large workflows. Personally I am not planning to use the new Nodes 2.0 and, unfortunately, am not able to invest the time to investigate and overhaul rgthree-comfy where needed. If you have issues when Nodes 2.0 is enabled, I'd urge you to switch it off as well and join me in hoping ComfyUI is not planning to deprecate the existing, stable canvas rendering all together.
+2026-01-03T02:08:32.827192517Z [0m
+2026-01-03T02:08:32.829845049Z Installing piexif...
+2026-01-03T02:08:32.888138468Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+2026-01-03T02:08:32.900078779Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+2026-01-03T02:08:32.948351796Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/github-stats.json
+2026-01-03T02:08:33.018166885Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+2026-01-03T02:08:33.049533129Z [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+2026-01-03T02:08:33.250108548Z Collecting piexif
+2026-01-03T02:08:33.385332957Z .  Downloading piexif-1.1.3-py2.py3-none-any.whl.metadata (3.7 kB)
+2026-01-03T02:08:33.412437833Z Downloading piexif-1.1.3-py2.py3-none-any.whl (20 kB)
+2026-01-03T02:08:33.661775881Z Installing collected packages: piexif
+2026-01-03T02:08:33.685746404Z Successfully installed piexif-1.1.3
+2026-01-03T02:08:33.743058329Z Successfully installed piexif
+2026-01-03T02:08:33.744709896Z Installing dghs-imgutils[gpu]...
+2026-01-03T02:08:34.194616323Z Collecting dghs-imgutils[gpu]
+2026-01-03T02:08:34.338819410Z   Downloading dghs_imgutils-0.19.0-py3-none-any.whl.metadata (20 kB)
+2026-01-03T02:08:34.406095778Z Collecting hbutils>=0.9.0 (from dghs-imgutils[gpu])
+2026-01-03T02:08:34.432113040Z   Downloading hbutils-0.14.2-py3-none-any.whl.metadata (29 kB)
+2026-01-03T02:08:34.660078106Z Collecting numpy<2 (from dghs-imgutils[gpu])
+2026-01-03T02:08:34.686123187Z   Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (61 kB)
+2026-01-03T02:08:34.914660906Z Collecting pandas (from dghs-imgutils[gpu])
+2026-01-03T02:08:34.939172281Z   Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+2026-01-03T02:08:35.010581367Z Collecting emoji<2.12,>=2.5.0 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.035429823Z   Downloading emoji-2.11.1-py2.py3-none-any.whl.metadata (5.3 kB)
+2026-01-03T02:08:35.069330318Z Collecting pilmoji>=1.3.0 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.095745662Z   Downloading pilmoji-2.0.4-py3-none-any.whl.metadata (3.3 kB)
+2026-01-03T02:08:35.167308768Z Collecting pyclipper (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.192623916Z   Downloading pyclipper-1.4.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (8.6 kB)
+2026-01-03T02:08:35.234642626Z Collecting deprecation>=2.0.0 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.261313081Z   Downloading deprecation-2.1.0-py2.py3-none-any.whl.metadata (4.6 kB)
+2026-01-03T02:08:35.308407332Z Collecting hfutils>=0.9.0 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.334107342Z .  Downloading hfutils-0.13.0-py3-none-any.whl.metadata (11 kB)
+2026-01-03T02:08:35.399395182Z Collecting bchlib!=2.0.0,!=2.0.1,!=2.1.0,!=2.1.1,!=2.1.2,>=1.0.0 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.426112116Z   Downloading bchlib-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+2026-01-03T02:08:35.466656000Z Collecting pyrfc6266>=1 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.493136303Z   Downloading pyrfc6266-1.0.2-py3-none-any.whl.metadata (1.5 kB)
+2026-01-03T02:08:35.536250178Z Collecting urlobject>=2 (from dghs-imgutils[gpu])
+2026-01-03T02:08:35.562536020Z   Downloading urlobject-3.0.0-py3-none-any.whl.metadata (4.8 kB)
+2026-01-03T02:08:35.618077648Z Collecting pytimeparse>=1.1.8 (from hbutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:35.644474721Z   Downloading pytimeparse-1.1.8-py2.py3-none-any.whl.metadata (3.4 kB)
+2026-01-03T02:08:35.685074545Z Collecting bitmath>=1.3.3.1 (from hbutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:35.711565179Z   Downloading bitmath-1.3.3.1.tar.gz (88 kB)
+2026-01-03T02:08:35.762505067Z   Installing build dependencies: started
+2026-01-03T02:08:36.382030790Z FETCH ComfyRegistry Data: 5/117
+2026-01-03T02:08:36.643691920Z   Installing build dependencies: finished with status 'done'
+2026-01-03T02:08:36.644361863Z   Getting requirements to build wheel: started
+2026-01-03T02:08:36.891230240Z   Getting requirements to build wheel: finished with status 'done'
+2026-01-03T02:08:36.892196954Z   Preparing metadata (pyproject.toml): started
+2026-01-03T02:08:37.034544084Z   Preparing metadata (pyproject.toml): finished with status 'done'
+2026-01-03T02:08:37.076193532Z Collecting chardet<5,>=3.0.4 (from hbutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.101985132Z   Downloading chardet-4.0.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-01-03T02:08:37.163535386Z Collecting tzlocal (from hfutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.189561598Z   Downloading tzlocal-5.3.1-py3-none-any.whl.metadata (7.6 kB)
+2026-01-03T02:08:37.247776347Z Collecting natsort (from hfutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.273719958Z   Downloading natsort-8.4.0-py3-none-any.whl.metadata (21 kB)
+2026-01-03T02:08:37.316350211Z Collecting random-user-agent (from hfutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.343810028Z .  Downloading random_user_agent-1.0.1-py3-none-any.whl.metadata (2.7 kB)
+2026-01-03T02:08:37.398132341Z Collecting cachetools (from hfutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.424427343Z   Downloading cachetools-6.2.4-py3-none-any.whl.metadata (5.6 kB)
+2026-01-03T02:08:37.475932764Z Collecting wcmatch>=10 (from hfutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.501819235Z   Downloading wcmatch-10.1-py3-none-any.whl.metadata (5.1 kB)
+2026-01-03T02:08:37.589791151Z Collecting pyparsing~=3.0.7 (from pyrfc6266>=1->dghs-imgutils[gpu])
+2026-01-03T02:08:37.614778668Z   Downloading pyparsing-3.0.9-py3-none-any.whl.metadata (4.2 kB)
+2026-01-03T02:08:37.697741724Z Collecting bracex>=2.1.1 (from wcmatch>=10->hfutils>=0.9.0->dghs-imgutils[gpu])
+2026-01-03T02:08:37.722091458Z   Downloading bracex-2.6-py3-none-any.whl.metadata (3.6 kB)
+2026-01-03T02:08:37.746103371Z INFO: pip is looking at multiple versions of opencv-contrib-python to determine which version is compatible with other requirements. This could take a while.
+2026-01-03T02:08:37.825040289Z Collecting opencv-contrib-python (from dghs-imgutils[gpu])
+2026-01-03T02:08:37.851912344Z   Downloading opencv_contrib_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-01-03T02:08:37.960351408Z Collecting pytz>=2020.1 (from pandas->dghs-imgutils[gpu])
+2026-01-03T02:08:37.984852073Z   Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+2026-01-03T02:08:38.065115237Z Downloading dghs_imgutils-0.19.0-py3-none-any.whl (464 kB)
+2026-01-03T02:08:38.127810585Z Downloading emoji-2.11.1-py2.py3-none-any.whl (433 kB)
+2026-01-03T02:08:38.162589064Z Downloading numpy-1.26.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (18.3 MB)
+2026-01-03T02:08:38.279778776Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.3/18.3 MB 159.1 MB/s  0:00:00
+2026-01-03T02:08:38.306080089Z Downloading bchlib-2.1.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (67 kB)
+2026-01-03T02:08:38.333040114Z Downloading deprecation-2.1.0-py2.py3-none-any.whl (11 kB)
+2026-01-03T02:08:38.360626492Z Downloading hbutils-0.14.2-py3-none-any.whl (225 kB)
+2026-01-03T02:08:38.392063587Z Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+2026-01-03T02:08:38.420404148Z Downloading hfutils-0.13.0-py3-none-any.whl (115 kB)
+2026-01-03T02:08:38.449108761Z Downloading pilmoji-2.0.4-py3-none-any.whl (9.7 kB)
+2026-01-03T02:08:38.478725118Z Downloading pyrfc6266-1.0.2-py3-none-any.whl (4.7 kB)
+2026-01-03T02:08:38.507874083Z Downloading pyparsing-3.0.9-py3-none-any.whl (98 kB)
+2026-01-03T02:08:38.536806667Z Downloading pytimeparse-1.1.8-py2.py3-none-any.whl (10.0 kB)
+2026-01-03T02:08:38.565904931Z Downloading urlobject-3.0.0-py3-none-any.whl (16 kB)
+2026-01-03T02:08:38.594523984Z Downloading wcmatch-10.1-py3-none-any.whl (39 kB)
+2026-01-03T02:08:38.623135106Z Downloading bracex-2.6-py3-none-any.whl (11 kB)
+2026-01-03T02:08:38.651644158Z Downloading cachetools-6.2.4-py3-none-any.whl (11 kB)
+2026-01-03T02:08:38.681389516Z Downloading natsort-8.4.0-py3-none-any.whl (38 kB)
+2026-01-03T02:08:38.712334768Z Downloading opencv_contrib_python-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (69.1 MB)
+2026-01-03T02:08:38.970888976Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.1/69.1 MB 271.0 MB/s  0:00:00
+2026-01-03T02:08:38.994279816Z Downloading pandas-2.3.3-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.8 MB)
+2026-01-03T02:08:39.102704330Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.8/12.8 MB 119.4 MB/s  0:00:00
+2026-01-03T02:08:39.127593247Z Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+2026-01-03T02:08:39.157169913Z Downloading pyclipper-1.4.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (989 kB)
+2026-01-03T02:08:39.162406936Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 989.6/989.6 kB 234.0 MB/s  0:00:00
+2026-01-03T02:08:39.187410943Z Downloading random_user_agent-1.0.1-py3-none-any.whl (8.2 MB)
+2026-01-03T02:08:39.225447086Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 224.8 MB/s  0:00:00
+2026-01-03T02:08:39.251975679Z Downloading tzlocal-5.3.1-py3-none-any.whl (18 kB)
+2026-01-03T02:08:39.386816547Z .Building wheels for collected packages: bitmath
+2026-01-03T02:08:39.387782221Z   Building wheel for bitmath (pyproject.toml): started
+2026-01-03T02:08:39.562246058Z   Building wheel for bitmath (pyproject.toml): finished with status 'done'
+2026-01-03T02:08:39.562667690Z   Created wheel for bitmath: filename=bitmath-1.3.3.1-py3-none-any.whl size=24047 sha256=88a7c25b37b0e42049f613acc853f0c7b00bdf1922ed30e0b127890785c0f371
+2026-01-03T02:08:39.562731090Z   Stored in directory: /root/.cache/pip/wheels/67/e1/c6/53fefee471c8a8660c919f42b566008a60cd2ee82254d6f7c1
+2026-01-03T02:08:39.565297801Z Successfully built bitmath
+2026-01-03T02:08:39.825804186Z Installing collected packages: urlobject, random-user-agent, pytz, pytimeparse, bitmath, tzlocal, pyparsing, pyclipper, numpy, natsort, emoji, deprecation, chardet, cachetools, bracex, bchlib, wcmatch, pyrfc6266, pilmoji, pandas, opencv-contrib-python, hbutils, hfutils, dghs-imgutils
+2026-01-03T02:08:39.978320390Z   Attempting uninstall: pyparsing
+2026-01-03T02:08:39.981244582Z     Found existing installation: pyparsing 3.3.1
+2026-01-03T02:08:39.984279755Z     Uninstalling pyparsing-3.3.1:
+2026-01-03T02:08:39.997028290Z       Successfully uninstalled pyparsing-3.3.1
+2026-01-03T02:08:40.054710787Z   Attempting uninstall: numpy
+2026-01-03T02:08:40.061424335Z     Found existing installation: numpy 2.2.6
+2026-01-03T02:08:40.117540216Z     Uninstalling numpy-2.2.6:
+2026-01-03T02:08:40.237393749Z FETCH ComfyRegistry Data: 10/117
+2026-01-03T02:08:40.473714381Z       Successfully uninstalled numpy-2.2.6
+2026-01-03T02:08:42.304374410Z .  Attempting uninstall: chardet
+2026-01-03T02:08:42.308617528Z     Found existing installation: chardet 5.2.0
+2026-01-03T02:08:42.313266188Z     Uninstalling chardet-5.2.0:
+2026-01-03T02:08:42.335514603Z       Successfully uninstalled chardet-5.2.0
+2026-01-03T02:08:44.073990698Z .FETCH ComfyRegistry Data: 15/117
+2026-01-03T02:08:45.523050093Z .  Attempting uninstall: opencv-contrib-python
+2026-01-03T02:08:45.527190111Z     Found existing installation: opencv-contrib-python 4.12.0.88
+2026-01-03T02:08:45.537712406Z     Uninstalling opencv-contrib-python-4.12.0.88:
+2026-01-03T02:08:45.686819704Z       Successfully uninstalled opencv-contrib-python-4.12.0.88
+2026-01-03T02:08:46.791633165Z Successfully installed bchlib-2.1.3 bitmath-1.3.3.1 bracex-2.6 cachetools-6.2.4 chardet-4.0.0 deprecation-2.1.0 dghs-imgutils-0.19.0 emoji-2.11.1 hbutils-0.14.2 hfutils-0.13.0 natsort-8.4.0 numpy-1.26.4 opencv-contrib-python-4.11.0.86 pandas-2.3.3 pilmoji-2.0.4 pyclipper-1.4.0 pyparsing-3.0.9 pyrfc6266-1.0.2 pytimeparse-1.1.8 pytz-2025.2 random-user-agent-1.0.1 tzlocal-5.3.1 urlobject-3.0.0 wcmatch-10.1
+2026-01-03T02:08:46.792269278Z ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+2026-01-03T02:08:46.792377158Z opencv-python-headless 4.12.0.88 requires numpy<2.3.0,>=2; python_version >= "3.9", but you have numpy 1.26.4 which is incompatible.
+2026-01-03T02:08:46.953506488Z Successfully installed dghs-imgutils[gpu]
+2026-01-03T02:08:47.414267121Z .Failed to find comfy root automatically, please copy the folder /root/comfy/ComfyUI/custom_nodes/ComfyLiterals/web manually in the web/extensions folder of ComfyUI
+2026-01-03T02:08:47.462480778Z Traceback (most recent call last):
+2026-01-03T02:08:47.462520238Z   File "/root/comfy/ComfyUI/nodes.py", line 2150, in load_custom_node
+2026-01-03T02:08:47.462530838Z     module_spec.loader.exec_module(module)
+2026-01-03T02:08:47.462534188Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2026-01-03T02:08:47.462536988Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2026-01-03T02:08:47.462545668Z   File "/root/comfy/ComfyUI/custom_nodes/ComfyUI_LayerStyle/__init__.py", line 35, in <module>
+2026-01-03T02:08:47.462550038Z     imported_module = importlib.import_module(".py.{}".format(name), __name__)
+2026-01-03T02:08:47.462552888Z                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:47.462555358Z   File "/usr/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2026-01-03T02:08:47.462557898Z     return _bootstrap._gcd_import(name[level:], package, level)
+2026-01-03T02:08:47.462563638Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:47.462566808Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2026-01-03T02:08:47.462569338Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2026-01-03T02:08:47.462571928Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2026-01-03T02:08:47.462574548Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2026-01-03T02:08:47.462577118Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2026-01-03T02:08:47.462579688Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2026-01-03T02:08:47.462582248Z   File "/root/comfy/ComfyUI/custom_nodes/ComfyUI_LayerStyle/py/add_grain.py", line 3, in <module>
+2026-01-03T02:08:47.462585658Z     from .imagefunc import log, tensor2pil, image_add_grain, pil2tensor
+2026-01-03T02:08:47.462599718Z   File "/root/comfy/ComfyUI/custom_nodes/ComfyUI_LayerStyle/py/imagefunc.py", line 22, in <module>
+2026-01-03T02:08:47.462602778Z     import cv2
+2026-01-03T02:08:47.462606668Z   File "/venv/lib/python3.11/site-packages/cv2/__init__.py", line 12, in <module>
+2026-01-03T02:08:47.462609158Z     import numpy.core.multiarray
+2026-01-03T02:08:47.462612698Z   File "/venv/lib/python3.11/site-packages/numpy/core/multiarray.py", line 85, in <module>
+2026-01-03T02:08:47.462615718Z     @array_function_from_c_func_and_dispatcher(_multiarray_umath.empty_like)
+2026-01-03T02:08:47.462618828Z      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:47.462622088Z   File "/venv/lib/python3.11/site-packages/numpy/_core/overrides.py", line 178, in decorator
+2026-01-03T02:08:47.462624718Z   File "/venv/lib/python3.11/site-packages/numpy/_core/overrides.py", line 158, in decorator
+2026-01-03T02:08:47.462630868Z RuntimeError: empty_like method already has a different docstring
+2026-01-03T02:08:47.462679429Z Cannot import /root/comfy/ComfyUI/custom_nodes/ComfyUI_LayerStyle module for custom nodes: empty_like method already has a different docstring
+2026-01-03T02:08:47.707800678Z generated new fontManager
+2026-01-03T02:08:47.913548969Z ------------------------------------------
+2026-01-03T02:08:47.913568699Z [34mComfyroll Studio v1.76 : [92m 175 Nodes Loaded[0m
+2026-01-03T02:08:47.913572699Z ------------------------------------------
+2026-01-03T02:08:47.913579149Z ** For changes, please see patch notes at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+2026-01-03T02:08:47.913609690Z ** For help, please see the wiki at https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
+2026-01-03T02:08:47.913632690Z ------------------------------------------
+2026-01-03T02:08:47.950627008Z [36;20m[/root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ckpts path: /root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux/ckpts[0m
+2026-01-03T02:08:47.950806779Z [36;20m[/root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using symlinks: False[0m
+2026-01-03T02:08:47.951008090Z [36;20m[/root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux] | INFO -> Using ort providers: ['CUDAExecutionProvider', 'DirectMLExecutionProvider', 'OpenVINOExecutionProvider', 'ROCMExecutionProvider', 'MIGraphXExecutionProvider', 'CPUExecutionProvider', 'CoreMLExecutionProvider'][0m
+2026-01-03T02:08:47.989927587Z DWPose: Onnxruntime with acceleration providers detected
+2026-01-03T02:08:48.005504323Z FETCH ComfyRegistry Data: 20/117
+2026-01-03T02:08:49.200612341Z Import times for custom nodes:
+2026-01-03T02:08:49.200618271Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/websocket_image_save.py
+2026-01-03T02:08:49.200622371Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyLiterals
+2026-01-03T02:08:49.200625681Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-SCAIL-Pose
+2026-01-03T02:08:49.200637511Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Custom-Scripts
+2026-01-03T02:08:49.200647561Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-WanAnimatePreprocess
+2026-01-03T02:08:49.200688011Z    0.0 seconds (IMPORT FAILED): /root/comfy/ComfyUI/custom_nodes/ComfyUI_LayerStyle
+2026-01-03T02:08:49.200698101Z    0.0 seconds: /root/comfy/ComfyUI/custom_nodes/rgthree-comfy
+2026-01-03T02:08:49.200766551Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI_essentials
+2026-01-03T02:08:49.200803242Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-KJNodes
+2026-01-03T02:08:49.200818272Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-Manager
+2026-01-03T02:08:49.200870962Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-VideoHelperSuite
+2026-01-03T02:08:49.200913122Z    0.1 seconds: /root/comfy/ComfyUI/custom_nodes/comfyui_controlnet_aux
+2026-01-03T02:08:49.200926072Z    0.4 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI_Comfyroll_CustomNodes
+2026-01-03T02:08:49.200937452Z    1.0 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-WanVideoWrapper
+2026-01-03T02:08:49.200943312Z   14.6 seconds: /root/comfy/ComfyUI/custom_nodes/ComfyUI-LogicUtils
+2026-01-03T02:08:49.402726496Z Context impl SQLiteImpl.
+2026-01-03T02:08:49.402788047Z Will assume non-transactional DDL.
+2026-01-03T02:08:49.403603340Z No target revision found.
+2026-01-03T02:08:49.439318683Z Starting server
+2026-01-03T02:08:49.439607954Z To see the GUI go to: http://0.0.0.0:8188
+2026-01-03T02:08:51.400490341Z .
+2026-01-03T02:08:51.400528531Z ComfyUI is ready and listening on port 8188
+2026-01-03T02:08:51.400534851Z SCAIL Worker: Starting RunPod Handler...
+2026-01-03T02:08:51.963547872Z FETCH ComfyRegistry Data: 25/117
+2026-01-03T02:08:52.925769712Z SCAIL Video Motion Transfer Worker starting...
+2026-01-03T02:08:52.925795873Z --- Starting Serverless Worker |  Version 1.8.1 ---
+2026-01-03T02:08:53.282197749Z {"requestId": null, "message": "Jobs in queue: 1", "level": "INFO"}
+2026-01-03T02:08:53.282232859Z {"requestId": null, "message": "Jobs in progress: 1", "level": "INFO"}
+2026-01-03T02:08:53.282344739Z {"requestId": "a09a28fd-fe4c-49a6-97e1-239d70975e13-e1", "message": "Started.", "level": "INFO"}
+2026-01-03T02:08:53.640142552Z Injected video 'video_8021b4e7-fcd7-4579-a895-7ccca7226e6e.MOV' into VHS_LoadVideo node 65
+2026-01-03T02:08:54.155676199Z Injected image 'image_b046401b-6bb4-4b5f-bd52-aaa0cdd813fe.png' into LoadImage node 52
+2026-01-03T02:08:54.155702969Z Executing workflow with output node: 131 (type: video)
+2026-01-03T02:08:54.159059334Z got prompt
+2026-01-03T02:08:54.159730296Z invalid prompt: {'type': 'invalid_prompt', 'message': 'Cannot execute because node LayerUtility: ImageScaleByAspectRatio V2 does not exist.', 'details': "Node ID '#66'", 'extra_info': {}}
+2026-01-03T02:08:54.162059056Z Error during processing: HTTP Error 400: Bad Request
+2026-01-03T02:08:54.162077126Z Traceback (most recent call last):
+2026-01-03T02:08:54.162080907Z   File "/root/rp_handler.py", line 165, in handler
+2026-01-03T02:08:54.162083377Z     output_data = api.queue_prompt_and_get_images(workflow, output_node_id)
+2026-01-03T02:08:54.162086617Z                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162089087Z   File "/root/ComfyUI_API_Wrapper.py", line 18, in queue_prompt_and_get_images
+2026-01-03T02:08:54.162091567Z     prompt_id = self.queue_prompt(prompt).get('prompt_id')
+2026-01-03T02:08:54.162093927Z                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162096447Z   File "/root/ComfyUI_API_Wrapper.py", line 52, in queue_prompt
+2026-01-03T02:08:54.162098777Z     return json.loads(urllib.request.urlopen(req).read())
+2026-01-03T02:08:54.162101157Z                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162103537Z   File "/usr/lib/python3.11/urllib/request.py", line 216, in urlopen
+2026-01-03T02:08:54.162105987Z     return opener.open(url, data, timeout)
+2026-01-03T02:08:54.162108277Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162110587Z   File "/usr/lib/python3.11/urllib/request.py", line 525, in open
+2026-01-03T02:08:54.162113027Z     response = meth(req, response)
+2026-01-03T02:08:54.162115977Z                ^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162118327Z   File "/usr/lib/python3.11/urllib/request.py", line 634, in http_response
+2026-01-03T02:08:54.162120627Z     response = self.parent.error(
+2026-01-03T02:08:54.162122947Z                ^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162125417Z   File "/usr/lib/python3.11/urllib/request.py", line 563, in error
+2026-01-03T02:08:54.162127717Z     return self._call_chain(*args)
+2026-01-03T02:08:54.162130007Z            ^^^^^^^^^^^^^^^^^^^^^^^
+2026-01-03T02:08:54.162132437Z   File "/usr/lib/python3.11/urllib/request.py", line 496, in _call_chain
+2026-01-03T02:08:54.162134837Z     result = func(*args)
+2026-01-03T02:08:54.162138807Z              ^^^^^^^^^^^
+2026-01-03T02:08:54.162141317Z   File "/usr/lib/python3.11/urllib/request.py", line 643, in http_error_default
+2026-01-03T02:08:54.162143707Z     raise HTTPError(req.full_url, code, msg, hdrs, fp)
+2026-01-03T02:08:54.162146107Z urllib.error.HTTPError: HTTP Error 400: Bad Request
+2026-01-03T02:08:54.301088692Z {"requestId": "a09a28fd-fe4c-49a6-97e1-239d70975e13-e1", "message": "Finished.", "level": "INFO"}
+2026-01-03T02:08:55.839141308Z FETCH ComfyRegistry Data: 30/117
+2026-01-03T02:08:59.692714200Z FETCH ComfyRegistry Data: 35/117

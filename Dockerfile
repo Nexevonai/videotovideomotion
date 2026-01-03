@@ -110,6 +110,7 @@ RUN /venv/bin/python -m pip install \
     pyloudnorm \
     gguf>=0.17.1 \
     opencv-contrib-python \
+    opencv-python-headless<4.10 \
     sageattention \
     numba \
     scipy
